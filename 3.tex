@@ -525,7 +525,7 @@ $(-\sqrt{2})^2=2$．所以，2的平方根也应有两个$\pm \sqrt{2}$．
 \begin{ex}
 \begin{enumerate}
     \item 求下列各数的平方根：$900,\quad 
-    \frac{196}{255},\quad 0.0121,\quad 4\frac{9}{4}$
+    \frac{196}{225},\quad 0.0121,\quad 4\frac{9}{4}$
 
 \item 求下列各值：
 \[-\sqrt{81},\quad \sqrt{\frac{4}{9}},\quad \sqrt{1},\quad \sqrt{0},\quad -\sqrt{0.000016}\]
@@ -702,11 +702,11 @@ $$50^2<2809<60^2$$
 \[\sqrt{2809}=50+b  \quad \Rightarrow\quad 2809=(50+b)^2\]
 $\therefore\quad 2809=50^2+2\x 50\x b+b^2$
 \begin{align}
-    2809-50^2&=+2\x 50\x b+b^2 \nonumber \\
+    2809-50^2&=2\x 50\x b+b^2 \nonumber \\
     309&=(2\x 50+b)\cdot b
 \end{align}
 用这个等式关系，可以试商确定$b$：只要把其中的
-$(2\x50+b)\cdot b$, 近似地看作$2\x50+b$，就可以得出
+$(2\x50+b)\cdot b$, 近似地看作$2\x50\x b$，就可以得出
 \[309\approx 2\x50\x b\]
 从而可以试算出$b\approx 3$．然后，再把$b\approx 3$代入关系式(3.3)
 进行正式计算：
@@ -791,7 +791,7 @@ $(2\x50+b)\cdot b$, 近似地看作$2\x50+b$，就可以得出
 
 \draw (-.5,-.5)--(3,-.5);
  
-\foreach \x/\xtext in {-1/2\x10+4=24 , -3/2\x 140+1=281 , -4/1 , -5/2\x 1410+4=2824 , -6/4 , -2/4 }
+\foreach \x/\xtext in {-1/2\times 10+4=24, -3/2\times 140+1=281, -4/1 , -5/2\times 1410+4=2824, -6/4 , -2/4 }
 {
    \node at (-.5-\x*0.15, \x)[left]{$\xtext$};
 }
@@ -876,6 +876,24 @@ $(2\x50+b)\cdot b$, 近似地看作$2\x50+b$，就可以得出
 
 一个数的算术平方根，除用开平方方法可以计算
 出来以外，还可以直接查《平方根表》而得到．
+
+\begin{table}[ht]
+    \centering
+    \resizebox{\linewidth}{!}{%
+        \begin{tabular}{|c|cccccccccc|ccccccccc|}
+            \hline
+            N   & 0                           & 1                          & 2     & 3     & 4     & 5     & 6     & 7     & 8     & 9     & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+            \hline
+            3.5 & 1.871                       & 1.873                      & 1.876 & 1.879 & 1.881 & 1.884 & 1.887 & 1.889 & 1.892 & 1.895 & 0 & 1 & 1 & 1 & 1 & 2 & 2 & 2 & 2 \\
+            3.6 & 1.897                       & 1.900                      & 1.903 & 1.905 & 1.908 & 1.910 & 1.913 & 1.916 & 1.918 & 1.921 & 0 & 1 & 1 & 1 & 1 & 2 & 2 & 2 & 2 \\
+            3.7 & 1.924                       & 1.926                      & 1.929 & 1.931 & 1.934 & 1.936 & 1.939 & 1.942 & 1.944 & 1.947 & 0 & 1 & 1 & 1 & 1 & 2 & 2 & 2 & 2 \\
+            3.8 & 1.949                       & 1.952                      & 1.954 & 1.957 & 1.960 & 1.962 & 1.965 & 1.967 & 1.970 & 1.972 & 0 & 1 & 1 & 1 & 1 & 2 & 2 & 2 & 2 \\
+            3.9 & 1.975                       & 1.977                      & 1.980 & 1.982 & 1.985 & 1.987 & 1.990 & 1.992 & 1.995 & 1.997 & 0 & 1 & 1 & 1 & 1 & 2 & 2 & 2 & 2 \\
+            4.0 & \multicolumn{10}{c|}{\dots} & \multicolumn{9}{c|}{\dots}                                                                                                     \\
+            \hline
+        \end{tabular}%
+    }
+\end{table}
 
 这个表分两部分，标有$N$的直行（列）和横行的
 数是被开方数；其余的数都是平方根数．最后一栏是
@@ -1172,13 +1190,13 @@ $$\left(\sqrt{a}\right)^2=a\qquad (a\ge 0)$$
 \[\sqrt{x^2}=|x|=\begin{cases}
     x,& x>0\\
     0, &x=0\\
-    -x & x<0
+    -x, & x<0
 \end{cases}\]
 \end{blk}
 
 这个性质可以这样来分析、说明：
 
-首先，任一个数x的平方，必是非负数．即：
+首先，任一个数 $x$ 的平方，必是非负数．即：
 $x^2\ge 0$，因而算术平方根$\sqrt{x^2}$是有意义的．
 
 其次，当$x$为正数或零时，由平方根的定义，显
@@ -1200,7 +1218,7 @@ $\sqrt{(-0.4)^2}=\sqrt{0.16}=-(-0.4)=0.4$等．
 \[\sqrt{x^2}=|x|=\begin{cases}
     x,& x>0\\
     0, &x=0\\
-    -x & x<0
+    -x, & x<0
 \end{cases}\]
 
 
@@ -1564,11 +1582,10 @@ $\sqrt{12}+\sqrt{75}-\sqrt{48}-\frac{1}{\sqrt{3}}-\frac{1}{2\sqrt{3}}$
 
 \begin{ex}
 \begin{enumerate}
-    \item (口答）$5\sqrt{2}+3\sqrt{2}$, $7\sqrt{3}+\sqrt{3}$, $2\sqrt{5}-3\sqrt{5}$, $\sqrt{4}+\sqrt{5}$是否等于$\sqrt{4+5}$, 为什么？
-
-    $\sqrt{3}\x \sqrt{2},\qquad \sqrt{6}\x \sqrt{2},\qquad \sqrt{\frac{1}{2}}\x \sqrt{2}$
+    \item （口答）$5\sqrt{2}+3\sqrt{2}$, $7\sqrt{3}+\sqrt{3}$, $2\sqrt{5}-3\sqrt{5}$, $\sqrt{4}+\sqrt{5}$是否等于$\sqrt{4+5}$, 为什么？
 
     \item 计算：
+    \[\sqrt{3}\x \sqrt{2},\qquad \sqrt{6}\x \sqrt{2},\qquad \sqrt{\frac{1}{2}}\x \sqrt{2}\]
     \[3\sqrt{28}-4\sqrt{7},\quad 3\sqrt{24}-\sqrt{\frac{3}{2}},\quad 4\sqrt{2}+2\sqrt{3}-5\sqrt{2}+\sqrt{3}-5\sqrt{3}\]
 
     \item 计算：
@@ -1585,12 +1602,12 @@ $\sqrt{12}+\sqrt{75}-\sqrt{48}-\frac{1}{\sqrt{3}}-\frac{1}{2\sqrt{3}}$
 \addcontentsline{toc}{subsection}{习题3.2}
 \begin{enumerate}
     \item 求下列各式的值：
-\[\left(\frac{1}{2}\right)^2,\qquad \sqrt{(-5)^2},\qquad \sqrt{\frac{9}{16}},\qquad -\sqrt{17^2\x 8^2}  \]
+\[\left(\sqrt{\frac{1}{2}}\right)^2,\qquad \sqrt{(-5)^2},\qquad \sqrt{\frac{9}{16}},\qquad -\sqrt{17^2\x 8^2}  \]
 \[\sqrt{17^2-8^2},\qquad \sqrt{121\x 169},\qquad \sqrt{256\x 225},\qquad \sqrt{17^2}-\sqrt{8^2}\]
 
 \item 计算下列各式：
 \begin{enumerate}
-    \item $\sqrt{(a-1)^2},\qquad \sqrt{(2-b)^2},\qquad \left(1-\sqrt{2}\right)^2$
+    \item $\sqrt{(a-1)^2},\qquad \sqrt{(2-b)^2},\qquad \left(\sqrt{1-\sqrt{2}}\right)^2$
     \item $\sqrt{\left(\sqrt{2}-1\right)^2}-\sqrt{\left(1-\sqrt{2}\right)^2},\qquad \sqrt{\left(\sqrt{3}-\sqrt{2}\right)^2}+\sqrt{\left(1-\sqrt{2}\right)^2}$
 \end{enumerate}
 
@@ -1646,7 +1663,7 @@ $\sqrt{12}+\sqrt{75}-\sqrt{48}-\frac{1}{\sqrt{3}}-\frac{1}{2\sqrt{3}}$
     \item $5\sqrt{63}+5\sqrt{7}-4\sqrt{28}$
     \item $\sqrt{75}+\sqrt{\frac{1}{3}}-\sqrt{48}$
     \item $3\sqrt{0.2}+4\sqrt{125}+\sqrt{\frac{1}{27}}-\sqrt{75}$
-    \item $\sqrt{24}-\left(\sqrt{\frac{1}{2}+2\sqrt{\frac{2}{3}}}\right)-\left(\sqrt{\frac{1}{8}-\sqrt{6}}\right)$
+    \item $\sqrt{24}-\left(\sqrt{\frac{1}{2}}+2\sqrt{\frac{2}{3}}\right)-\left(\sqrt{\frac{1}{8}}-\sqrt{6}\right)$
 \end{enumerate}
 
 \item 计算：
@@ -1667,7 +1684,7 @@ $\sqrt{12}+\sqrt{75}-\sqrt{48}-\frac{1}{\sqrt{3}}-\frac{1}{2\sqrt{3}}$
     \item 已知$a=-\sqrt{2},\; b=\sqrt{3}$，试求$\frac{1}{a}+\frac{1}{b}$的值． 
 \end{enumerate}
 
-\begin{enumerate}
+\item  \begin{enumerate}
     \item 如果$x,y$都是非负数，且$\sqrt{x}+\sqrt{y}=0$, 试求
 $x,y$的值．
 \item 如果$\sqrt{a^2}+\sqrt{b^2}=0$, 试求$a,b$的值．
@@ -1819,7 +1836,7 @@ $x=0$, 即解集为$\{0\}$．
         x^2&=\frac{4}{5} \tag{两边除以5}\\
     \end{align*}
 
-    由平方根的意义可知：$x\pm\sqrt{\frac{4}{5}}$，即：
+    由平方根的意义可知：$x=\pm\sqrt{\frac{4}{5}}$，即：
 \[ x_1=\frac{2}{5}\sqrt{5},\qquad x_2=-\frac{2}{5}\sqrt{5} \]
 所以，原方程的解集是$\left\{\frac{2}{5}\sqrt{5},\; -\frac{2}{5}\sqrt{5}\right\}$．
 
@@ -2102,7 +2119,7 @@ $\because\quad x_1=6,\qquad x_2=0$
 这时，我们可以如图3.9所示，把$4\x x$的小长
 方形平分为两个$2\x x$的更小长方形，再把其中带阴影
 的一个移至正方形$x\x x$的下方．这样，原来长方形就
-变成了⿸形，但面积仍为32${\rm m}^2$．
+变成了Г形，但面积仍为32${\rm m}^2$．
 \begin{figure}[htp]
 \centering
 \begin{minipage}[t]{0.48\textwidth}
@@ -2187,9 +2204,9 @@ $\therefore\quad x_1=4,\quad x_2=-8$
 
 \begin{solution}
 \begin{enumerate}
-    \item $x^2+3x=40$的两边同加一次项系数3的一半的平方数$\left(\frac{3}{3}\right)^2$，就得到：
+    \item $x^2+3x=40$的两边同加一次项系数3的一半的平方数$\left(\frac{3}{2}\right)^2$，就得到：
 \begin{align*}
-    x^2+3x+ \left(\frac{3}{3}\right)^2&=40+\left(\frac{3}{3}\right)^2\\
+    x^2+3x+ \left(\frac{3}{2}\right)^2&=40+\left(\frac{3}{2}\right)^2\\
     \left(x+\frac{3}{2}\right)^2&=\frac{169}{4}\\
     x+\frac{3}{2}&=\pm\frac{13}{2}  \tag{平方根的定义}
 \end{align*}
@@ -2240,7 +2257,7 @@ $\therefore\quad $原方程的解集是$\left\{1,\;-\frac{5}{2}\right\}$．
         x^2-8x&=-9\tag{移项}\\
         x^2-8x+(-4)^2&=-9+(-4)^2 \tag{配方}\\
         (x-4)^2&=7\\
-        x-4&=\sqrt{7} \tag{平方根的意义}
+        x-4&=\pm\sqrt{7} \tag{平方根的意义}
     \end{align*}
 $\therefore\quad x_1=4+\sqrt{7},\qquad x_2=4-\sqrt{7}$
 
@@ -2619,7 +2636,7 @@ $\therefore\quad y_1=9,\qquad y_2=4$
 把$y_1,y_2$分别代入原设，得：
 \begin{align*}
     x^2&=9 \quad \Rightarrow\quad  x=\pm 3\\
-    x^2&=4 \quad \Rightarrow\quad  x=\pm 42\\
+    x^2&=4 \quad \Rightarrow\quad  x=\pm 2\\
 \end{align*}
 $\therefore\quad $原方程的解集是$\{2,3,-2,-3\}$．
 
@@ -2809,7 +2826,7 @@ $ax^2+bx+c=0\quad (a\ne 0)$的\textbf{根的判别式}．记作
    
     整理成标准式：$2x^2-2\sqrt{6}x+3=0$
 
-    $\because\quad \Delta=b^2-4ac=(-26)^2-4\x2\x3=0$
+    $\because\quad \Delta=b^2-4ac=(-2\sqrt{6})^2-4\x2\x3=0$
 
  $\therefore\quad $   此方程有两个相等的实数根（重根）．
 
@@ -2994,7 +3011,7 @@ $x^2-mx+m-4=0$一定有两个不相等的实数根．
 \item $x^2-4x$
 \item $x^2+10x$
 \item $x^2+3x$
-\item $x-\frac{1}{2}x$
+\item $x^2-\frac{1}{2}x$
 \item $3x^2+x$
 \item $5x^2-2x$
 \item $x^2+bx$
@@ -3006,7 +3023,7 @@ $x^2-mx+m-4=0$一定有两个不相等的实数根．
 \begin{multicols}{2}
     \begin{enumerate}
 \item $5x^2-2x=0$
-\item $3x^2-6=0$
+\item $3x^2-6x=0$
 \item $x^2+8x-33=0$
 \item $x^2-14x+24=0$
 \item $x^2-4x+5=0$
@@ -3161,7 +3178,7 @@ $x^2-mx+m-4=0$一定有两个不相等的实数根．
 解决实际应用问题．
 
 \begin{example}
-把308张画片平均分给若干儿童．已知每
+把108张画片平均分给若干儿童．已知每
 人分得的张数比儿童人数少3, 试问：有几个儿童？
 每个人分得画片几张？
 \end{example}
@@ -3583,7 +3600,7 @@ $ax^2+bx+c=0$ 或 $x=0$
     \begin{enumerate}
         \item 正方形的面积是55225${\rm m^2}$，试求它的边长是
 多少？
-\item 长方体的体积是7500cm，长、宽、高的比
+\item 长方体的体积是7500${\rm cm^2}$，长、宽、高的比
 是$5:4:3$. 试求长方体的长、宽、高各是多少？
     \end{enumerate}
     
@@ -3623,12 +3640,15 @@ $ax^2+bx+c=0$ 或 $x=0$
 \[\sqrt{1-x},\qquad \sqrt{x-2}\cdot \sqrt{x},\qquad \sqrt{(x-3)^2}  \]
 
 \item 试决定下列各算式的符号：
-\[\frac{\sqrt{2}}{2}-\frac{\sqrt{3}}{3},\qquad \sqrt{(5-a)^2}-\sqrt{(a-5)^2} \]
+\begin{enumerate}
+    \item $\frac{\sqrt{2}}{2}-\frac{\sqrt{3}}{3}$
+    \item $\sqrt{(5-a)^2}-\sqrt{(a-5)^2} \quad (a>5)$
+\end{enumerate}
 
 \item 计算：
 \begin{enumerate}
     \item $\sqrt{45}-\frac{1}{5}\sqrt{5}-\frac{1}{3}\sqrt{20}$
-    \item $\frac{3\sqrt{6}}{2\sqrt{3}}-\sqrt{128}+2\sqrt{\frac{1}{2}}\quad (a>5)$
+    \item $\frac{3\sqrt{6}}{2\sqrt{3}}-\sqrt{128}+2\sqrt{\frac{1}{2}}$
     \item $5\sqrt{24}-3\sqrt{1\frac{1}{2}}-\sqrt{54}-\sqrt{24}$
     \item $\frac{\sqrt{8}}{\sqrt{5}\cdot \sqrt{6}}$
     \item $\left(4\sqrt{3}-3\right)\left(3\sqrt{2}+5\sqrt{3}\right)-1$
@@ -3672,10 +3692,11 @@ $ax^2+bx+c=0$ 或 $x=0$
     \item $x^2-ax-bx+\frac{a^2}{4}+\frac{b^2}{4}=0$
 \end{enumerate}
 
+\item 用换元法解下列高次方程：
 \begin{enumerate}
     \item $x^4-6x^2=0$
     \item $2x^4-19x^2+9=0$
-    \item $\sqrt{3}(x^2\cdot x)^2=\sqrt{2}(x^2-x)$
+    \item $\sqrt{3}(x^2-x)^2=\sqrt{2}(x^2-x)$
     \item $(6x^2-7x)^2-2(6x^2-7x)-3=0$
     \item $(2x^2-1)^4-(2x^2-1)^2=0$
     \item $x\left(x-\sqrt{3}\right)\left(x-2\sqrt{3}\right)\left(x-3\sqrt{3}\right)=216$
@@ -3719,13 +3740,13 @@ $7x^2+mx+n=0$有两个根$2$, $-\frac{3}{7}$，
 \item 今有四个连续整数，已知其中最小的数与其中最大的
 数之积等于这四个数之和，试求这四个数．
 \item 数字和是8的两位数，乘以它的两位数字交换位置后
-所得的男一个两位数，等于1855．试求这个两位数．
+所得的另一个两位数，等于1855．试求这个两位数．
 \item 有一个长方形场地，长比宽多4米．现在要环绕这个
 长方形四周，修建一条宽2米的道路，使这条环形道所占的
 面积与这个场地的面积相等．试求：这个长方形场地的面
 积．
 \item 要在长2.4m，宽2m的长方形中间，挖去一块面积是
-19.2${\rm m^2}$的小长方形，使剩下的长方环形四周都一样宽．
+1.92${\rm m^2}$的小长方形，使剩下的长方环形四周都一样宽．
 试求这个宽度？
 \item 甲、乙两块长方形地里，共植树416棵，甲地比乙地多
 植树196棵，如果两块地里所植树木的排数都是比行数少1．
